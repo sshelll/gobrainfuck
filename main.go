@@ -47,7 +47,7 @@ func precheck() {
 			brackets++
 		case ']':
 			brackets--
-		case '.', ',', '+', '-':
+		case '.', ',', '+', '-', ' ', '\r', '\n':
 		default:
 			log.Fatalf("invalid char: %c\n", ch)
 		}
@@ -71,6 +71,8 @@ func eat() (hasNext bool) {
 	ch := srcCodes[codePos]
 
 	switch ch {
+	case ' ', '\n', '\r', '\t':
+		codePos++
 	case '>':
 		tapePos++
 		codePos++

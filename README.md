@@ -25,9 +25,6 @@
 gobrainfuck '${brainfuck_code}' '${input}'
 ```
 
-**Note: this program does not support line breaks.**
-
-
 
 For example:
 
@@ -43,5 +40,10 @@ For example:
    gobrainfuck '++++[>+++++<-]>[<+++++>-]+<+[>[>+>+<<-]++>>[<<+>>-]>>>[-]++>[-]+>>>+[[-]++++++>>>]<<<[[<++++++++<++>>-]+<.<[>----<-]<]<<[>>>>>[>>>[-]+++++++++<[>-<-]+++++++++>[-[<->-]+[<<<]]<[>+<-]>]<<-]<<-]'
    ```
 
-   
+3. Use file   
 
+   ```shell
+   gobrainfuck "$(cat hello.bf)"
+   ```
+
+   
